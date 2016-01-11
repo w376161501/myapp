@@ -1,0 +1,41 @@
+<div class="modal">
+  <ion-header-bar  class="bar-green"  style="border:0" >
+    <h1 class="title">登录</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()"><i class="icon ion-ios-close-empty"></i></button>
+    </div>
+  </ion-header-bar>
+  <ion-content style="background-color: #fff8ec">
+  <div style="text-align: center;margin:0 auto;margin:60px 0">
+  <img src="{{loginData.loginimage}}" alt="" style="max-width: 114px;max-height: 114px;margin:0 auto">
+  </div>
+    <form ng-submit="doLogin()" class="gem-form" name="myForm">
+    <div><p style="text-align: center;color:red;">{{loginData.error}}</p></div>
+      <div class="list" style="padding:0 40px">
+        <label class="item item-input">
+          <span class="input-label" >用户名：</span>
+          <input type="text" ng-model="loginData.username" placeholder="昵称/手机号/邮箱" name="username" />
+         
+        </label>
+        <label class="item item-input" >
+          <span class="input-label" >密&nbsp;&nbsp;&nbsp;码：</span>
+          <input type="password" ng-model="loginData.password" placeholder="请输入密码" />
+        </label>
+        <div class="row" style="padding:0 10px">
+        <div class="col col-50">
+          <a style="color:gray" href="register.html">免费注册></a>
+          </div>
+          <div class="col col-50" style="text-align:right">
+          <a style="color:gray" href="forget.html">忘记密码</a>
+          </div>
+          
+        </div>
+      </div>
+    </form>
+  </ion-content>
+   <ion-footer-bar style="padding:0;border:0;line-height: 1em;">
+  <a class="button button-block button-balanced" type="submit" style="bottom:0px;width:100%;line-height: 44px;border-radius: 0;border-width: 0;color:#204445;background-color: #4ccfa5;margin-top: 0;margin-bottom: 0" ng-click="loginbutton()">
+   登录
+  </a> 
+  </ion-footer-bar>
+</div>

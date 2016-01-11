@@ -1,0 +1,36 @@
+<ion-view view-title="看看热闹">
+  <ion-content class="padding">
+    <div class="list card" style="box-shadow: 0 0 0 0;padding: 0 16px;">
+      <h2 style="font-size:22px;font-family: sans-serif;">{{dash.title}}</h2> 
+      <div class="item  tabs-secondary tabs-icon-left" style="padding:0;border:0px">         
+        <p style="font-size:14px;font-weight: normal;">{{dash.local}}<span style="margin-left: 20px">{{dash.date}}</span>
+          <button style="line-height: 1em;min-height:1em;padding:0 2px;"  class="button button-icon ion-thumbsup" ng-click="dash.good = dash.good + 1"></button>
+          <label class="label-1" >{{dash.good}}</label>                  
+          <button style="line-height: 1em;min-height:1em;padding:0" class="button button-icon ion-thumbsdown" ng-click="dash.bad = dash.bad - 1"></button>
+          <label class="label-1">{{dash.bad}}</label>                
+        </p>       
+      </div>
+      <ion-slide-box on-slide-changed="slideHasChanged($index)" style="margin:12px 0">
+        <ion-slide>
+          <div><img class="full-image" ng-src="{{dash.image}}"></div>
+        </ion-slide>
+        <ion-slide>
+          <div><img class="full-image" ng-src="{{dash.image}}"></div>
+        </ion-slide>          
+      </ion-slide-box>        
+      <div class="item item-body" style="line-height: 1.5em;font-size:16px;padding-left:0px;padding-right: 0px;white-space:normal;">{{dash.shortdespriction}}</div>   
+    </div>
+  </ion-content>
+<ion-footer-bar>
+  <div class="item item-input-inset" style="border:0px;padding:16px;width:100%">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="我来说两句...">
+    </label>
+    <a href="#/tab/tabs/comment/{{dash.id}}" class="button button-small button-outline button-green  ion-chatbubble-working">
+      51
+    </a>
+  </div> 
+</ion-footer-bar>
+</ion-view>
+  
+ 

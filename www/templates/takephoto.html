@@ -1,0 +1,54 @@
+
+<div class="modal">
+  <ion-header-bar  class="bar-green"  style="border:0" >
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModal()"><i class="icon ion-ios-close-empty"></i></button>
+    </div>
+  </ion-header-bar>
+
+   <ion-content style="background-color: #fff8ec;">
+   <div style="float:left;display:block">
+      <ul style="height: 260px;margin:6px 0px" ng-show="update.mediahide" style="float:left">
+      <li ng-repeat="image in pictures">
+      <a class="item-2 item-thumbnail-left" href="#"  type="item-text-wrap" >
+            <img  ng-src="{{image}}" >
+            </a>
+      </li>
+      <li>
+       <a class="item-2 item-thumbnail-left" href="#">
+            <button class="button-1 icon ion-ios-plus-empty" ng-click="TakePhoto()" style="position: absolute;top: 10px;left: 10px;max-width: 80px;max-height: 80px;width:100%;height: 100%;border:1px solid #eee6d8;color: #d1d1d1">
+            </button>
+            </a>
+      </li>
+      
+      </ul>
+       <ul style="height: 260px;margin:6px 0px" ng-show="update.mediashow"  >
+      <li >
+      
+      <video style="max-height:220px;float:center" controls="controls"  src="{{update.path}}" >
+        您的浏览器不支持 video 标签。
+      </video>
+
+
+    </li>
+  </ul>
+      </div>
+        <div class="list" style="float:left;clear:both">
+          <i class="item" href="#">
+            <textarea rows="2" cols="48" placeholder="这一刻的想法..." style="line-height: 1.5em;background: transparent;" ng-model="commentTextPhoto" id="AssistIextName"></textarea>
+          </i>
+          <a class="item item-icon-left item-icon-right" href="#" ng-click="maplocation()">
+            <i class="icon ion-ios-location-outline" style="font-size:24px"></i>
+            所在位置
+            <i class="icon ion-ios-arrow-right" style="font-size:24px;color:#d1d1d1"></i>
+          </a>
+      </div>
+
+  </ion-content>
+   <ion-footer-bar style="padding:0;border:0;line-height: 1em;">
+  <a class="button button-block button-balanced" type="submit" style="bottom:0px;width:100%;line-height: 44px;border-radius: 0;border-width: 0;color:#204445;background-color: #4ccfa5;margin-top: 0;margin-bottom: 0" ng-click="updatePhoto()">
+   发送
+  </a> 
+  </ion-footer-bar>
+</div>

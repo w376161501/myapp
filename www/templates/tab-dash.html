@@ -1,0 +1,51 @@
+<ion-view view-title="Dashboard" >
+  <ion-content >
+  <div class="row responsive-sm" style="padding: 0">
+   <div class="col" style="padding: 0;margin-bottom: 0">
+      <ion-slide-box on-slide-changed="slideHasChanged($index)" style="height:260px">
+      <ion-slide>
+      <div class="box blue" style="background: url(img/banner-1.jpg) no-repeat; height:260px;width:100%;padding:200px 0 0 0">
+      
+      <h1 style="font-size:16px; line-height:30px;color:#ffffff;background-color:rgba(0, 0, 0, 0.2);text-align: center" >吐槽地铁渣男被人肉搜索</h1>
+      </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box blue" style="background: url(img/banner-2.jpg) no-repeat; height:260px;padding:170px 0 0 0">
+        <h1 style="font-size:16px; line-height:30px;color:#ffffff;background-color:rgba(0, 0, 0, 0.2);text-align: center">地铁11号线小孩撒尿<br> 劝阻乘客遭小孩家长群殴</h1>
+        </div>
+      </ion-slide>
+      </ion-slide-box>
+      </div>
+      </div>
+      <ion-refresher on-refresh="doRefresh()"  pulling-text="Pull to refresh..."></ion-refresher>
+    <ion-list>
+     <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in items" type="item-text-wrap" href="#/tab/tabs/dash/{{chat.id}}">
+        <img ng-src="{{chat.image}}" style="border-radius: 0%;max-width: 70px;max-height: 60px;left:6px;top:6px">
+        <h2 style="margin-left: 10px">{{chat.title}}</h2>      
+          <div class="buttons" style="margin-left: 20px" >
+
+                  <div class="row" style="line-height: 1em;padding: 0;height:1em">
+                    <div class="col" style="padding: 0;line-height: 1em">
+                   
+                      <button style="line-height: 1em;min-height:1em;padding:0 2px;"  class="button button-icon ion-thumbsup" ng-click="dash.good = dash.good + 1">
+                     
+                      </button>
+                      <i class="iconfont">&#xe651;</i>
+                                           
+                      <label class="label-1" ng-bind="chat.good"></label>                  
+                      <button style="line-height: 1em;min-height:1em;padding:0" class="button button-icon ion-thumbsdown" 
+                      ng-click="dash.bad = dash.bad - 1">
+                      </button>
+                      <label class="label-1" ng-bind="chat.bad"></label>                
+                      <button style="line-height: 1em;min-height:1em;padding:0;color:#f26377;"  class="button  button-icon ion-ios-chatbubble-outline">
+                      </button>
+                      <label class="label-1">{{chat.comment.length}}</label>
+                    </div>
+
+                  </div>
+                </div> 
+                </ion-item>
+    </ion-list>
+   <ion-infinite-scroll  on-infinite="loadMore()" distance="10%" ng-if="refresh.judje"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

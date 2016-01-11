@@ -1,0 +1,71 @@
+<!-- 
+<ion-view view-title="TEXT"  >
+  <ion-content class="padding">
+   <div  ng-app="myApp" >
+   First Name: <input type="text" ng-model="firstName"><br>
+   Last Name: <input type="text" ng-model="lastName"><br>
+   <br>
+   Full Name: {{firstName + " " + lastName}}
+  </div>
+  </ion-content>
+</ion-view>
+ -->
+
+<!-- <ion-view view-title="TEXT"  >
+  <ion-content class="padding">
+   <div  >
+   First Name: <input type="text" ng-model="firstName"><br>
+   Last Name: <input type="text" ng-model="lastName"><br>
+   <br>
+   Full Name: {{firstName + " " + lastName}}
+  </div>
+  </ion-content>
+</ion-view> -->
+
+<!-- <ion-view view-title="TEXT"  >
+  <ion-content class="padding">
+   <div ng-app="myApp" ng-controller="personCtrl">
+名: <input type="text" ng-model="firstName"><br>
+姓: <input type="text" ng-model="lastName"><br>
+<br>
+姓名: {{fullName()}}
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+    $scope.fullName = function() {
+        return $scope.firstName + " " + $scope.lastName;
+    }
+});
+</script>
+  </ion-content>
+</ion-view> -->
+
+<ion-view view-title="TEXT"  >
+			<ion-content >
+			<p>wwwwwwwwwwwwwwwwwwww</p>
+			<p>wwwwwwwwwwwwwwwwwwww</p>
+			<p>wwwwwwwwwwwwwwwwwwww</p>
+			<p>wwwwwwwwwwwwwwwwwwww</p>
+				<div class="list">
+					<div class="item item-avatar item-icon-right">
+						<i class="icon ion-images royal" data-tap-disabled="true" ng-click="showPopup()"></i>
+           
+					</div>
+          <div class="item item-avatar item-icon-left">
+           
+            <i class="icon ion-social-twitter-outline royal" data-tap-disabled="true" ng-click="showConfirm()"></i>
+           
+          </div>
+          <div class="item item-avatar item-icon-center">
+           
+            
+            <i  data-tap-disabled="true" ng-click="showAlert()">登录</i>
+            
+          </div>
+				</div>
+			</ion-content>
+</ion-view>
+

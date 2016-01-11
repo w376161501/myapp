@@ -1,0 +1,48 @@
+
+ <ion-view view-title="评论">
+<ion-content>
+  <ion-list>
+    <div class="list card">
+      <ion-item style="padding:0" class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in comments" type="item-text-wrap">
+      <div class="item item-avatar">
+        <img src="{{chat.C_image}}">
+        <span style="color:#0c8c51;font-size:14px;">{{chat.C_Name}}</span>
+        <p style="line-height: 1.5em;margin-top: 10px;font-size:18px;white-space:normal;">{{chat.C_informion}}</p>     
+    </div>
+    </ion-item>
+    </div>
+  </ion-list>
+<!-- <input type="file" file-model="myFile"/>
+<div class="col-md-12">
+    <img ng-src="{{imageSrc}}" style="max-width:300px;max-height:300px;margin:0 auto;display:block;" />
+</div> -->
+<div style="padding: 0 16px"> 
+  <form enctype="multipart/form-data" method="post" name="upform" action="http://10.192.164.102/learn/PHPupdate.php">  
+  <input name="upfile" type="file">  
+  <input type="submit" value="上传">
+  </form>  
+ <!--  <video style="width: 100%"  src="img\mov_bbb.mp4" controls="controls"> -->
+  <video style="width: 100%"  src="{{update.path}}"  controls="controls">
+   您的浏览器不支持 video 标签。
+</video>
+</div>
+<!-- 
+<div class="list">
+          <div class="item item-avatar item-icon-right">
+            <img ng-src="{{image}}!60" name="AssistImageName" />
+            <i class="icon ion-images royal" data-tap-disabled="true" ng-click="showImageUploadChoices()"></i>
+          </div>
+        </div>   -->  
+</ion-content>
+<ion-footer-bar>
+  <div class="item item-input-inset" style="border:0px;padding:16px;width:100%">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="我来说两句...">
+    </label>
+    <a href="#/tab/tabs/comment/{{dash.id}}" class="button button-small button-outline button-green">
+      原文
+    </a>
+    
+  </div> 
+</ion-footer-bar>
+</ion-view>
